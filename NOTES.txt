@@ -1,0 +1,49 @@
+http://openflights.org/data.html
+
+CREATE TABLE airports1 
+(OPENFLIGHTSID char(6),
+ NAME varchar,
+ CITY varchar, 
+ COUNTRY varchar,
+ IATACODE varchar,
+ ICAOCODE varchar,
+ LATITUDE double precision,
+ LONGTITUDE double precision,
+ ALTITUDE varchar,
+ TIMEZONE varchar,
+ DST varchar,
+TZ varchar);
+
+COPY airports1 FROM '/Users/rboardman/dev/airports/airports_short.dat' DELIMITER ',' CSV;
+
+POSTGRES PGADMIN IMPORT
+http://stackoverflow.com/questions/19400173/how-should-i-import-data-from-csv-into-a-postgres-table-using-pgadmin-3
+
+select * from airports1 where "country" = 'Canada';
+
+BACKGROUND
+http://mentalfloss.com/article/67294/10-amazing-abandoned-airports-and-airbases
+https://www.skyscanner.net/news/14-worlds-most-amazing-abandoned-airports
+
+REACT
+https://github.com/reactjs/react-tutorial
+
+https://github.com/facebookincubator/create-react-app
+
+MONGO
+http://mongodb.github.io/node-mongodb-native/2.2/quick-start/?_ga=1.211968023.2089949822.1473286659
+
+mongoimport --host=127.0.0.1 -d mydb -c things --type csv --file ./airports_short.dat --headerline
+
+HEROKU
+https://agile-inlet-11791.herokuapp.com/ | https://git.heroku.com/agile-inlet-11791.git
+https://devcenter.heroku.com/articles/mean-apps-restful-api
+https://dashboard.heroku.com/apps/agile-inlet-11791
+mongodb://<dbuser>:<dbpassword>@ds019836.mlab.com:19836/heroku_mt7m877z
+MONGODB_URI: mongodb://heroku_mt7m877z:1impdu86ujlo2jel7qsbbe8l5r@ds019836.mlab.com:19836/heroku_mt7m877z
+mongoimport -h ds019836.mlab.com:19836 -d heroku_mt7m877z -u heroku_mt7m877z -p 1impdu86ujlo2jel7qsbbe8l5r -c airports --file airports_short.dat --type csv --headerline
+
+REACT TEST ENV SETUP
+https://desolate-waters-33778.herokuapp.com/ | https://git.heroku.com/desolate-waters-33778.git
+
+
